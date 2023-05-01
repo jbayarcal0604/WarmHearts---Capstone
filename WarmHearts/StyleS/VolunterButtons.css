@@ -1,0 +1,40 @@
+﻿body {
+}
+
+.buttonVolunteers {
+    display: inline-flex;
+    height: 35px;
+    padding: 0;
+    background: #008000;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    overflow: hidden;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+    .buttonVolunteers:hover {
+        background: #006400;
+
+    }
+
+    .buttonVolunteers:active {
+        background: #003f00;
+    }
+
+    .button__text,
+    .button__icon{
+        display: inline-flex;
+        align-items: center;
+        padding: 0 20px;
+        color: white;
+        height: 100%;
+    }
+
+    .button__icon{
+        font-size: 1.5em;
+        background: rgba(0, 0, 0, 0.08);
+    }

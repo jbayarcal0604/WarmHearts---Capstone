@@ -1,0 +1,39 @@
+﻿body {
+}
+
+.buttonDeclineVolunteers {
+    display: inline-flex;
+    height: 35px;
+    padding: 0;
+    background: #FF0000;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    overflow: hidden;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+    .buttonDeclineVolunteers:hover {
+        background: #8B0000;
+    }
+
+    .buttonDeclineVolunteers:active {
+        background: #1a0000;
+    }
+
+    .button__text,
+    .button__iconDecline {
+        display: inline-flex;
+        align-items: center;
+        padding: 0 20px;
+        color: white;
+        height: 100%;
+    }
+
+    .button__iconDecline {
+        font-size: 1.5em;
+        background: rgba(0, 0, 0, 0.08);
+    }

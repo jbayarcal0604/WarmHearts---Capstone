@@ -1,0 +1,681 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Admin.master.cs" Inherits="WarmHearts.User.Admin" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Admin </title>
+    <!-- HTML5 Shim and Respond.js IE9 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="CodedThemes">
+    <meta name="keywords" content=" Admin , Responsive, Landing, Bootstrap, App, Template, Mobile, iOS, Android, apple, creative app">
+    <meta name="author" content="CodedThemes">
+    
+    <!-- Favicon icon -->
+    <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
+    <!-- Google font-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
+    <!-- Required Fremwork -->
+    <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap/css/bootstrap.min.css">
+    <!-- themify-icons line icon -->
+    <link rel="stylesheet" type="text/css" href="../assets/icon/themify-icons/themify-icons.css">
+
+    
+    <!-- Custom styles for this template -->
+    <link href="../BootstrapFiles/css/style.css" rel="stylesheet" />
+    
+    <!-- notif -->
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- ico font -->
+    <link rel="stylesheet" type="text/css" href="../assets/icon/icofont/css/icofont.css">
+    <!-- Style.css -->
+    <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/jquery.mCustomScrollbar.css">
+
+    <%--fontawesome css--%>
+    <link href="../fontawesome/css/all.css" rel="stylesheet" />
+    <%--datatables css--%>
+    <link href="../datatables/css/jquery.dataTables.min.css" rel="stylesheet" />
+
+    <!-- Required Jquery -->
+    <script type="text/javascript" src="../assets/js/jquery/jquery.min.js"></script> 
+    <script type="text/javascript" src="../assets/js/jquery-ui/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../assets/js/popper.js/popper.min.js"></script>
+    <script type="text/javascript" src="../assets/js/bootstrap/js/bootstrap.min.js"></script>
+    <!-- jquery slimscroll js -->
+    <script type="text/javascript" src="../assets/js/jquery-slimscroll/jquery.slimscroll.js"></script>
+    <!-- modernizr js -->
+    <script type="text/javascript" src="../assets/js/modernizr/modernizr.js"></script>
+    <!-- am chart -->
+    <script src="../assets/pages/widget/amchart/amcharts.min.js"></script>
+    <script src="../assets/pages/widget/amchart/serial.min.js"></script>
+    <!-- Todo js -->
+    <script type="text/javascript " src="../assets/pages/todo/todo.js "></script>
+    <!-- Custom js -->
+    <script type="text/javascript" src="../assets/pages/dashboard/custom-dashboard.js"></script>
+    <script type="text/javascript" src="../assets/js/script.js"></script>
+    <script type="text/javascript " src="../assets/js/SmoothScroll.js"></script>
+    <script src="../assets/js/pcoded.min.js"></script>
+    <script src="../assets/js/demo-12.js"></script>
+    <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script> 
+
+    <%--Datatables2 --%>
+    <link rel="stylesheet" type="text/css" href="../assets/datatables/css/dataTables.bootstrap4.min.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/datatables/css/respnsive.bootstrap4.min.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/datatables/css/icon-font.min.css" />
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+
+
+<body>
+
+    <form id="form1" runat="server">
+        <!-- Pre-loader start -->
+        <div class="theme-loader">
+            <div class="ball-scale">
+                <div class='contain'>
+                    <div class="ring">
+                        <div class="frame"></div>
+                    </div>
+                    <div class="ring">
+                        <div class="frame"></div>
+                    </div>
+                    <div class="ring">
+
+                        <div class="frame"></div>
+                    </div>
+                    <div class="ring">
+                        <div class="frame"></div>
+                    </div>
+                    <div class="ring">
+                        <div class="frame"></div>
+                    </div>
+                    <div class="ring">
+                        <div class="frame"></div>
+                    </div>
+                    <div class="ring">
+                        <div class="frame"></div>
+                    </div>
+                    <div class="ring">
+                        <div class="frame"></div>
+                    </div>
+                    <div class="ring">
+                        <div class="frame"></div>
+                    </div>
+                    <div class="ring">
+                        <div class="frame"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Pre-loader end -->
+        <div id="pcoded" class="pcoded">
+            <div class="pcoded-overlay-box"></div>
+            <div class="pcoded-container navbar-wrapper">
+
+                <nav class="navbar header-navbar pcoded-header">
+                    <div class="navbar-wrapper">
+
+                        <div class="navbar-logo">
+                            <a class="mobile-menu" id="mobile-collapse" href="#!">
+                                <i class="ti-menu"></i>
+                            </a>
+                            <%--<a class="mobile-search morphsearch-search" href="#">
+                            <i class="ti-search"></i>
+                        </a>--%>
+                            <a href="Homepage.aspx">
+                                <img class="img-fluid" src="../assets/images/logo1.png" alt="WarmHearts-Logo" />
+                            </a>
+                            <a class="mobile-options">
+                                <i class="ti-more"></i>
+                            </a>
+                        </div>
+
+                        <div class="navbar-container container-fluid">
+                            <ul class="nav-left">
+                                <li>
+                                    <div class="sidebar_toggle"><a href="javascript:void(0)"><i class="ti-menu"></i></a></div>
+                                </li>
+
+                                <li>
+                                    <a href="#!" onclick="javascript:toggleFullScreen()">
+                                        <i class="ti-fullscreen"></i>
+                                    </a>
+                                </li>
+
+                                
+                            </ul>
+                            <ul class="nav-right">
+                                <%--<li class="header-notification">
+                                <a href="#!">
+                                    <i class="ti-bell"></i>
+                                    <span class="badge bg-c-pink"></span>
+                                </a>
+                                <ul class="show-notification">
+                                    <li>
+                                        <h6>notifications</h6>
+                                        <label class="label label-danger">new</label>
+                                    </li>
+                                    <li>
+                                        <div class="media">
+                                            <img class="d-flex align-self-center img-radius" src="../assets/images/avatar-4.jpg" alt="generic placeholder image">
+                                            <div class="media-body">
+                                                <h5 class="notification-user">john doe</h5>
+                                                <p class="notification-msg">lorem ipsum dolor sit amet, consectetuer elit.</p>
+                                                <span class="notification-time">30 minutes ago</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="media">
+                                            <img class="d-flex align-self-center img-radius" src="../assets/images/avatar-3.jpg" alt="generic placeholder image">
+                                            <div class="media-body">
+                                                <h5 class="notification-user">joseph william</h5>
+                                                <p class="notification-msg">lorem ipsum dolor sit amet, consectetuer elit.</p>
+                                                <span class="notification-time">30 minutes ago</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="media">
+                                            <img class="d-flex align-self-center img-radius" src="../assets/images/avatar-4.jpg" alt="generic placeholder image">
+                                            <div class="media-body">
+                                                <h5 class="notification-user">sara soudein</h5>
+                                                <p class="notification-msg">lorem ipsum dolor sit amet, consectetuer elit.</p>
+                                                <span class="notification-time">30 minutes ago</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>--%>
+                                
+                                
+                                   
+
+
+                                <li class="user-profile header-notification">
+
+                                    <a href="#!">
+                                        <img src="../assets/images/cardodalisay.jpg" class="img-radius" alt="User-Profile-Image">
+                                        <span>Administrator</span>
+                                        <i class="ti-angle-down"></i>
+                                    </a>
+
+                                   
+                                    <ul class="show-notification profile-notification">
+
+                                        <%-- PROFILE DROPDOWN MENU--%>
+                                        <%--    <li>
+                                        <a href="#!">
+                                            <i class="ti-settings"></i> Settings
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="ti-user"></i> Profile
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="ti-email"></i> My Messages
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="ti-lock"></i> Lock Screen
+                                        </a>
+                                    </li>--%>
+
+                                        <li>
+                                           <asp:LinkButton ID="lbLogout" OnClick="lbLogout_Click" runat="server" CausesValidation="false">
+                                                <i class="ti-layout-sidebar-left "></i>Logout
+                                           </asp:LinkButton>
+                                           
+                                        </li>
+                                    </ul>
+                                </li>
+
+
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                <div class="pcoded-main-container">
+                    <div class="pcoded-wrapper">
+                        <nav class="pcoded-navbar">
+                            <div class="sidebar_toggle"><a href="#"><i class="icon-close icons"></i></a></div>
+                            <div class="pcoded-inner-navbar main-menu">
+
+                                <%--  PROFILE --%>
+                                <%--<div class="">
+                                <div class="main-menu-header">
+                                    <img class="img-40 img-radius" src="../assets/images/avatar-4.jpg" alt="User-Profile-Image">
+                                    <div class="user-details">
+                                        <span>John Doe</span>
+                                        <span id="more-details">UX Designer<i class="ti-angle-down"></i></span>
+                                    </div>
+                                </div>
+
+                                <div class="main-menu-content">
+                                    <ul>
+                                        <li class="more-details">
+                                            <a href="#"><i class="ti-user"></i>View Profile</a>
+                                            <a href="#!"><i class="ti-settings"></i>Settings</a>
+                                            <a href="auth-normal-sign-in.html"><i class="ti-layout-sidebar-left"></i>Logout</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>--%>
+
+                                <%-- SEARCH BUTTON--%>
+                                <%-- <div class="pcoded-search">
+                                <span class="searchbar-toggle">  </span>
+                                <div class="pcoded-search-box ">
+                                    <input type="text" placeholder="Search">
+                                    <span class="search-icon"><i class="ti-search" aria-hidden="true"></i></span>
+                                </div>
+                            </div>--%>
+                                <div class="pcoded-navigatio-lavel" data-i18n="nav.category.navigation">Overview</div>
+                                <ul class="pcoded-item pcoded-left-item">
+                                    <li class="active">
+                                        <a href="Dashboard.aspx">
+                                            <span class="pcoded-micon"><i class="ti-home" ></i><b>D</b></span>
+                                            <span class="pcoded-mtext" data-i18n="nav.dash.main">Dashboard</span>
+                                            <span class="pcoded-mcaret"></span>
+                                        </a>
+                                    </li>
+                                    <%--  <li class="pcoded-hasmenu">
+                                    <a href="javascript:void(0)">
+                                        <span class="pcoded-micon"><i class="ti-layout-grid2-alt"></i></span>
+                                        <span class="pcoded-mtext"  data-i18n="nav.basic-components.main">Components</span>
+                                        <span class="pcoded-mcaret"></span>
+                                    </a>
+                                    <ul class="pcoded-submenu">
+                                        <li class=" ">
+                                            <a href="accordion.html">
+                                                <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.basic-components.alert">Accordion</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                        <li class=" ">
+                                            <a href="breadcrumb.html">
+                                                <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.basic-components.breadcrumbs">Breadcrumbs</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                        <li class=" ">
+                                            <a href="button.html">
+                                                <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.basic-components.alert">Button</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                        <li class=" ">
+                                            <a href="tabs.html">
+                                                <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.basic-components.breadcrumbs">Tabs</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                        <li class=" ">
+                                            <a href="color.html">
+                                                <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.basic-components.alert">Color</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                        <li class=" ">
+                                            <a href="label-badge.html">
+                                                <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.basic-components.breadcrumbs">Label Badge</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                        <li class=" ">
+                                            <a href="tooltip.html">
+                                                <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.basic-components.alert">Tooltip</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                        <li class=" ">
+                                            <a href="typography.html">
+                                                <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.basic-components.breadcrumbs">Typography</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                        <li class=" ">
+                                            <a href="notification.html">
+                                                <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.basic-components.alert">Notification</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                        <li class=" ">
+                                            <a href="icon-themify.html">
+                                                <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.basic-components.breadcrumbs">Icon</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+
+                                    </ul>
+                                </li>
+                            </ul>
+                            <div class="pcoded-navigatio-lavel" data-i18n="nav.category.forms">Forms &amp; Tables</div>
+                            <ul class="pcoded-item pcoded-left-item">
+                                <li>
+                                    <a href="form-elements-component.html">
+                                        <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
+                                        <span class="pcoded-mtext" data-i18n="nav.form-components.main">Form Components</span>
+                                        <span class="pcoded-mcaret"></span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="bs-basic-table.html">
+                                        <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
+                                        <span class="pcoded-mtext" data-i18n="nav.form-components.main">Basic Table</span>
+                                        <span class="pcoded-mcaret"></span>
+                                    </a>
+                                </li>--%>
+                                </ul>
+
+                                <%-- ADMIN MENU STARTS--%>
+
+                               <%-- <div class="pcoded-navigatio-lavel" data-i18n="nav.category.forms">Menu </div>--%>
+                                <ul class="pcoded-item pcoded-left-item">
+                                   <%-- <li>
+                                        <a href="#">
+                                            <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
+                                            <span class="pcoded-mtext" data-i18n="nav.form-components.main">Page 1</span>
+                                            <span class="pcoded-mcaret"></span>
+                                        </a>
+                                    </li>
+
+                                     <li>
+                                        <a href="#">
+                                            <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
+                                            <span class="pcoded-mtext" data-i18n="nav.form-components.main">Page 2</span>
+                                            <span class="pcoded-mcaret"></span>
+                                        </a>
+                                    </li>--%>
+
+
+                                    <%--  <li>
+                                    <a href="map-google.html">
+                                        <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
+                                        <span class="pcoded-mtext" data-i18n="nav.form-components.main">Admin</span>
+                                        <span class="pcoded-mcaret"></span>
+                                    </a>
+                                </li>
+                                <li class="pcoded-hasmenu">
+                                    <a href="javascript:void(0)">
+                                        <span class="pcoded-micon"><i class="ti-layout-grid2-alt"></i></span>
+                                        <span class="pcoded-mtext"  data-i18n="nav.basic-components.main">Manage</span>
+                                        <span class="pcoded-mcaret"></span>
+                                    </a>
+                                    <ul class="pcoded-submenu">
+                                        <li class=" ">
+                                            <a href="auth-normal-sign-in.html">
+                                                <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.basic-components.alert">Login</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                        <li class=" ">
+                                            <a href="auth-sign-up.html">
+                                                <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.basic-components.breadcrumbs">Register</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                        <li class=" ">
+                                            <a href="sample-page.html">
+                                                <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.basic-components.breadcrumbs">Sample Page</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                
+                            </ul>--%>
+                                </ul>
+
+                             <%--   <div class="pcoded-navigatio-lavel" data-i18n="nav.category.forms">Menu 2</div>
+                                <ul class="pcoded-item pcoded-left-item">
+                                    <li>
+                                        <a href="#">
+                                            <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
+                                            <span class="pcoded-mtext" data-i18n="nav.form-components.main">Page 3</span>
+                                            <span class="pcoded-mcaret"></span>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">
+                                            <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
+                                            <span class="pcoded-mtext" data-i18n="nav.form-components.main">Page 4</span>
+                                            <span class="pcoded-mcaret"></span>
+                                        </a>
+                                    </li>
+                                </ul>
+
+                                <div class="pcoded-navigatio-lavel" data-i18n="nav.category.forms">Menu 3</div>
+                                <ul class="pcoded-item pcoded-left-item">
+                                    <li>
+                                        <a href="#">
+                                            <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
+                                            <span class="pcoded-mtext" data-i18n="nav.form-components.main">Page 5</span>
+                                            <span class="pcoded-mcaret"></span>
+                                        </a>
+                                    </li>
+
+                                     <li>
+                                        <a href="#">
+                                            <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
+                                            <span class="pcoded-mtext" data-i18n="nav.form-components.main">Page 6</span>
+                                            <span class="pcoded-mcaret"></span>
+                                        </a>
+                                    </li>--%>
+                                </ul>
+
+
+
+
+                                <div class="pcoded-navigatio-lavel" data-i18n="nav.category.other">Manage</div>
+                                <ul class="pcoded-item pcoded-left-item">
+                                    <li class="pcoded-hasmenu ">
+                                        <a href="ManageUsers.aspx">
+                                            <span class="pcoded-micon"><i class="ti-direction-alt"></i><b>M</b></span>
+                                            <span class="pcoded-mtext" data-i18n="nav.menu-levels.main">Donor Users</span>
+                                            <span class="pcoded-mcaret"></span>
+                                        </a>
+
+                                          <a href="ManageOPUsers.aspx">
+                                            <span class="pcoded-micon"><i class="ti-direction-alt"></i><b>M</b></span>
+                                            <span class="pcoded-mtext" data-i18n="nav.menu-levels.main">Orphanage Users</span>
+                                            <span class="pcoded-mcaret"></span>
+                                        </a>
+
+                                          <a href="ManageAdmin.aspx">
+                                            <span class="pcoded-micon"><i class="ti-direction-alt"></i><b>M</b></span>
+                                            <span class="pcoded-mtext" data-i18n="nav.menu-levels.main">Admin Users</span>
+                                            <span class="pcoded-mcaret"></span>
+                                        </a>
+
+
+                                        
+                                                  
+                                            
+
+                                        </ul>
+                                    </li>
+
+
+                                </ul>
+                            </div>
+                        </nav>
+
+                          
+
+                        <%-- ADMIN MENU ENDS--%>
+
+                        <div class="pcoded-content">
+                            <!-- Danger-color Breadcrumb card start -->
+                            <div class="card borderless-card">
+                                <div class="card-block danger-breadcrumb">
+                                  
+                                    <div class="page-header-breadcrumb">
+                                        <ul class="breadcrumb-title">
+                                            <li class="breadcrumb-item">
+                                                <a href="#!">
+                                                    <i class="icofont icofont-home"></i>
+                                                </a>
+                                            </li>
+                                            <li class="breadcrumb-item"><a href="Dashboard.aspx">Dashboard</a>
+                                            </li>
+                                            <li class="breadcrumb-item"><a href="#!"><% Response.Write(Session["breadcrumb"]); %></a>
+                                            </li>
+
+                                             <li class="nav-item active">
+                                       <%-- <button type="button" class="icon-button" id="Notifi" data-toggle="modal" data-target="#exampleModal">
+                                            <span class="material-icons">notifications</span>
+                                            <span class="icon-button__badge"></span>
+                                          </button>--%>
+                                          <asp:LinkButton Class="icon-button" ID="LKBtnNotif" runat="server" data-toggle="modal" data-target="#exampleModal">
+                                              <span class="material-icons">notifications</span>
+                                            <span class="icon-button__badge"><asp:Label ID="notification1" runat ="server">&nbsp</asp:Label></span>
+                                          </asp:LinkButton>
+                                              
+                                       
+                                    </li>
+
+                                        </ul>
+                                    </div>  
+                                </div>
+                            </div>
+                            <!-- Danger-color Breadcrumb card end -->
+                              <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                             </asp:ContentPlaceHolder>
+                        </div>
+                    </div>
+                </div>
+
+              
+
+            </div>
+        </div>
+
+         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Notification</h5>
+
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                           <div class="row">
+                                   <div class="col">
+                                       <h4>You have&nbsp <asp:Label ID="Notification2" runat ="server"> </asp:Label>&nbsp notifications</h4>
+
+                                       <asp:Repeater ID="r1" runat="server"> 
+                                           <ItemTemplate>
+                                       
+                                       <span class="message media-body">
+                                           <span class="name float-left"><%#Eval("orphname") %> wants to be verified</span>
+                                         <br />
+                                        
+                                           <a href="ManageOPUsers.aspx?orphname=<%#Eval("orphname") %> " id ="view" ><p style="font-size: large; color:blue;">Click here to View OP Details</p></a>
+                                           
+                                       </span>
+                                       <hr />
+                                            
+                                            
+                                               </ItemTemplate>
+                                       </asp:Repeater>
+                                   </div>
+                                </div>
+                          
+                                <br />
+                       
+                           
+                              
+                          
+                      
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                         
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+
+
+
+
+
+
+
+    </form>
+
+
+
+    <!-- Required Jquery -->
+    <script src="../assets/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="../assets/datatables/js/dataTables.bootstrap4.min.js"></script>
+    <script src="../assets/datatables/js/dataTables.responsive.min.js"></script>
+    <script src="../assets/datatables/js/responsive.bootstrap4.min.js"></script>
+    <script src="../assets/datatables/js/dataTables.responsive.min.js"></script>
+
+    <!-- buttons for export datatable -->
+    
+    <script src="../assets/datatables/js/dataTables.buttons.min.js"></script>
+    <script src="../assets/datatables/js/jszip.min.js"></script>
+    <script src="../assets/datatables/js/buttons.print.min.js"></script>
+    <script src="../assets/datatables/js/buttons.html5.min.js"></script>
+    <script src="../assets/datatables/js/buttons.flash.min.js"></script>
+    <script src="../assets/datatables/js/pdfmake.min.js"></script>
+    <script src="../assets/datatables/js/vfs_fonts.js"></script>
+    <script src="../assets/datatables/js/datatable-setting.js"></script>
+
+
+   
+    
+    
+
+    <script>
+        var $window = $(window);
+        var nav = $('.fixed-button');
+        $window.scroll(function () {
+            if ($window.scrollTop() >= 200) {
+                nav.addClass('active');
+            }
+            else {
+                nav.removeClass('active');
+            }
+        });
+    </script>
+</body>
+</html>
+
